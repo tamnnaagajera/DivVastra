@@ -1351,4 +1351,8 @@ body {
     }
 
 }
-
+@media (max-width: 600px) {
+    .logo img {
+        width: 50px;
+    }
+}
