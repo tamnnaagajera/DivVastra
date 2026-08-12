@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Customize Your Kurta | DIV VASTRA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+    <!-- PAGE -->
+
+    <section class="customize-page">
+
+        <h1>MAKE YOUR OWN DESIGN</h1>
+
+        <p class="customize-subtitle">
+            Design your perfect kurta your way.
+        </p>
+
+
+        <!-- CUSTOMIZATION FORM -->
+
+        <div class="customize-form">
+
+            <h2>CUSTOMIZE YOUR KURTA</h2>
+
+
+            <!-- NAME -->
+
+            <label>Your Name</label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+            >
+
+
+            <!-- WHATSAPP -->
+
+            <label>WhatsApp Number</label>
+
+            <input
+                type="tel"
+                id="customerPhone"
+                placeholder="Enter your WhatsApp number"
+            >
+
+
+            <!-- FABRIC -->
+
+            <label>Choose Fabric</label>
+
+            <select id="fabric">
+
+                <option value="">Select Fabric</option>
+
+                <option value="Cotton">
+                    Cotton
+                </option>
+
+                <option value="Silk">
+                    Silk
+                </option>
+
+                <option value="Velvet">
+                    Velvet
+                </option>
+
+                <option value="Linen">
+                    Linen
+                </option>
+
+            </select>
+
+
+            <!-- COLOR -->
+
+            <label>Choose Color</label>
+
+            <select id="color">
+
+                <option value="">Select Color</option>
+
+                <option value="Black">
+                    Black
+                </option>
+
+                <option value="White">
+                    White
+                </option>
+
+                <option value="Cream">
+                    Cream
+                </option>
+
+                <option value="Red">
+                    Red
+                </option>
+
+                <option value="Blue">
+                    Blue
+                </option>
+
+                <option value="Custom Color">
+                    Custom Color
+                </option>
+
+            </select>
+
+
+            <!-- SIZE -->
+
+            <label>Select Size</label>
+
+            <div class="custom-size">
+
+                <button type="button"
+                        onclick="selectSize(this)">
+                    S
+                </button>
+
+                <button type="button"
+                        onclick="selectSize(this)">
+                    M
+                </button>
+
+                <button type="button"
+                        onclick="selectSize(this)">
+                    L
+                </button>
+
+                <button type="button"
+                        onclick="selectSize(this)">
+                    XL
+                </button>
+
+                <button type="button"
+                        onclick="selectSize(this)">
+                    XXL
+                </button>
+
+            </div>
+
+
+            <!-- REQUIREMENTS -->
+
+            <label>
+                Tell us about your design
+            </label>
+
+            <textarea
+                id="requirements"
+                rows="5"
+                placeholder="Describe your design, embroidery, style, measurements or any other requirements..."
+            ></textarea>
+
+
+            <!-- WHATSAPP BUTTON -->
+
+            <button
+    type="button"
+    class="customize-submit"
+    onclick="sendCustomizeRequest()"
+>
+    SEND REQUEST ON WHATSAPP
+</button>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

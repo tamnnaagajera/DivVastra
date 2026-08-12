@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Buy Back | DIV VASTRA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <section class="buyback-page">
+
+        <h1>BUY BACK</h1>
+
+        <p class="page-subtitle">
+            Give your DIV VASTRA outfit a second life.
+        </p>
+
+
+        <div class="buyback-content">
+
+            <h2>SELL YOUR OUTFIT BACK TO US</h2>
+
+            <p>
+                Have a DIV VASTRA outfit that you no longer wear?
+                Share its details with us and our team will
+                get in touch with you.
+            </p>
+
+
+            <div class="buyback-form">
+
+                <label>Your Name</label>
+                <input type="text" id="buyerName" placeholder="Enter your name">
+
+
+                <label>Phone Number</label>
+                <input type="tel" id="buyerPhone" placeholder="Enter your phone number">
+
+
+                <label>Outfit Name</label>
+                <input type="text" id="outfitName" placeholder="Enter outfit name">
+
+
+                <label>Condition of Outfit</label>
+
+                <select id="outfitCondition">
+
+                    <option value="">Select condition</option>
+                    <option value="Like New">Like New</option>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Good">Good</option>
+
+                </select>
+
+
+                <label>Additional Details</label>
+
+                <textarea
+                    id="outfitDetails"
+                    placeholder="Tell us anything about the outfit..."
+                ></textarea>
+
+
+                <button onclick="buyBackOnWhatsApp()">
+                    SEND REQUEST
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
