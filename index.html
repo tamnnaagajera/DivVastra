@@ -40,8 +40,8 @@
 
 
         <div class="icons">
-    <span class="search-icon">⌕</span>
-    <span class="heart-icon">♡</span>
+    <span class="search-icon" onclick="openSearch()">⌕</span>
+    <span class="heart-icon" onclick="toggleLike(this)">♡</span>
     <!-- <span class="cart-icon">🛒</span> -->
 </div>
 
@@ -58,9 +58,9 @@
 
     <button class="close-btn" onclick="closeMenu()">×</button>
 
-    <a href="#">SHOP</a>
+    <a href="buy.html">SHOP</a>
     <a href="rent.html">RENT</a>
-    <a href="buy.html">BUY</a>
+    <!-- <a href="buy.html">BUY</a> -->
     <a href="customize.html">CUSTOMIZE</a>
 
     <hr>
@@ -259,6 +259,18 @@
 
 
     <script src="script.js"></script>
+   <div class="search-box" id="searchBox">
+
+    <button onclick="closeSearch()">×</button>
+
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search products..."
+        oninput="searchProducts()"
+    >
+
+</div>
 
 
 </body>

@@ -20,35 +20,109 @@
             Explore our collection of handcrafted kurtas.
         </p>
 
-        <div class="products-grid">
+        <div class="products-grid" id="productsGrid">
 
-           <a href="product.html?product=1" class="product-card">
-                <img src="images/kurta1.jpg" alt="Kurta">
-                <h3>Kurta Name</h3>
-                <p>₹1,499</p>
-            </a>
+          <div class="product-card">
 
-           <a href="product.html?product=2" class="product-card">
-                <img src="images/kurta2.jpg" alt="Kurta">
-                <h3>Kurta Name</h3>
-                <p>₹1,699</p>
-            </a>
+    <div class="product-image">
+        <img src="images/kurta1.jpg" alt="Kurta">
+        <button
+    type="button"
+    class="like-button"
+    onclick="toggleProductLike(1, this)">
+    ♡
+</button>
 
-            <a href="product.html?product=3" class="product-card">
-                <img src="images/kurta3.jpg" alt="Kurta">
-                <h3>Kurta Name</h3>
-                <p>₹1,899</p>
-            </a>
+        <button class="like-button"
+                onclick="toggleProductLike(1, this)">
+            ♡
+        </button>
+    </div>
 
-            <a href="product.html?product=4" class="product-card">
-                <img src="images/kurta4.jpg" alt="Kurta">
-                <h3>Kurta Name</h3>
-                <p>₹1,999</p>
-            </a>
+    <a href="product.html?product=1" class="product-link">
+        <h3>Kurta Name</h3>
+        <p>₹1,499</p>
+    </a>
+
+</div>
+
+           <div class="product-card">
+
+    <div class="product-image">
+        <img src="images/kurta2.jpg" alt="Kurta">
+        <button
+    type="button"
+    class="like-button"
+    onclick="toggleProductLike(2, this)">
+    ♡
+</button>
+
+        <button class="like-button"
+                onclick="toggleProductLike(2, this)">
+            ♡
+        </button>
+    </div>
+
+    <a href="product.html?product=2" class="product-link">
+        <h3>Kurta Name</h3>
+        <p>₹1,699</p>
+    </a>
+
+</div>
+
+            <div class="product-card">
+
+    <div class="product-image">
+
+        <img src="images/kurta3.jpg" alt="Kurta">
+
+        <button
+            type="button"
+            class="like-button"
+            onclick="toggleProductLike(3, this)">
+            ♡
+        </button>
+
+    </div>
+
+    <a href="product.html?product=3" class="product-link">
+        <h3>Kurta Name</h3>
+        <p>₹1,899</p>
+    </a>
+
+</div>
+
+    <a href="product.html?product=3" class="product-link">
+        <h3>Kurta Name</h3>
+        <p>₹1,899</p>
+    </a>
+
+</div>
+
+            <div class="product-card">
+
+    <div class="product-image">
+        <img src="images/kurta4.jpg" alt="Kurta">
+
+        <button class="like-button"
+                onclick="toggleProductLike(4, this)">
+            ♡
+        </button>
+    </div>
+
+    <a href="product.html?product=4" class="product-link">
+        <h3>Kurta Name</h3>
+        <p>₹1,999</p>
+    </a>
+
+</div>
 
         </div>
 
     </section>
+
+    <script src="script.js"></script>
+
 
 </body>
 

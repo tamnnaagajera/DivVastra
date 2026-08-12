@@ -312,3 +312,146 @@ function sendCustomizeRequest() {
         "_blank"
     );
 }
+
+function toggleLike(button) {
+
+    if (button.innerText === "♡") {
+        button.innerText = "♥";
+        button.style.color = "red";
+    } else {
+        button.innerText = "♡";
+        button.style.color = "#555";
+    }
+
+}
+
+function openSearch() {
+    document.getElementById("searchBox").classList.add("show");
+
+    document.getElementById("searchInput").focus();
+}
+
+function closeSearch() {
+    document.getElementById("searchBox").classList.remove("show");
+}
+
+function searchProducts() {
+
+    const searchText =
+        document.getElementById("searchInput").value.toLowerCase();
+
+    const products =
+        document.querySelectorAll(".product-card");
+
+    products.forEach(function(product) {
+
+        const productName =
+            product.querySelector("h3").innerText.toLowerCase();
+
+        if (productName.includes(searchText)) {
+            product.style.display = "block";
+        } else {
+            product.style.display = "none";
+        }
+
+    });
+
+}
+
+// =========================
+// PRODUCT LIKE / WISHLIST
+// =========================
+
+function toggleProductLike(productId, button) {
+
+    let likedProducts =
+        JSON.parse(localStorage.getItem("likedProducts")) || [];
+
+    if (likedProducts.includes(productId)) {
+
+        likedProducts = likedProducts.filter(function(id) {
+            return id !== productId;
+        });
+
+        button.innerText = "♡";
+        button.style.setProperty("color", "#555", "important");
+
+    } else {
+
+        likedProducts.push(productId);
+
+        button.innerText = "♥";
+        button.style.setProperty("color", "red", "important");
+    }
+
+    localStorage.setItem(
+        "likedProducts",
+        JSON.stringify(likedProducts)
+    );
+}
+
+// =========================
+// PRODUCT DETAILS LIKE
+// =========================
+
+function toggleProductDetailLike() {
+
+    const button =
+        document.getElementById("productLikeButton");
+
+    if (!buyProductNumber) {
+        return;
+    }
+
+    let likedProducts =
+        JSON.parse(localStorage.getItem("likedProducts")) || [];
+
+    const productId = Number(buyProductNumber);
+
+    if (likedProducts.includes(productId)) {
+
+        // UNLIKE
+        likedProducts = likedProducts.filter(function(id) {
+            return id !== productId;
+        });
+
+        button.innerText = "♡";
+        button.classList.remove("liked");
+
+    } else {
+
+        // LIKE
+        likedProducts.push(productId);
+
+        button.innerText = "♥";
+        button.classList.add("liked");
+    }
+
+    localStorage.setItem(
+        "likedProducts",
+        JSON.stringify(likedProducts)
+    );
+}
+
+window.addEventListener("load", function () {
+
+    const button =
+        document.getElementById("productLikeButton");
+
+    if (!button || !buyProductNumber) {
+        return;
+    }
+
+    let likedProducts =
+        JSON.parse(localStorage.getItem("likedProducts")) || [];
+
+    const productId = Number(buyProductNumber);
+
+    if (likedProducts.includes(productId)) {
+
+        button.innerText = "♥";
+        button.classList.add("liked");
+
+    }
+
+});
