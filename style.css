@@ -1461,3 +1461,19 @@ body {
     }
 
 }
+
+@media (max-width: 600px) {
+
+    .search-icon {
+        font-size: 32px !important;
+    }
+
+    .heart-icon {
+        font-size: 23px !important;
+    }
+
+    .cart-icon {
+        font-size: 22px !important;
+    }
+
+}
