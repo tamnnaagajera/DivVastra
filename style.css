@@ -1333,3 +1333,22 @@ body {
 
 }
 
+@media (max-width: 600px) {
+
+    /* LOGO */
+    .logo img {
+        width: 65px;
+    }
+
+    /* SEARCH + OTHER ICONS */
+    .icons {
+        gap: 10px;
+        font-size: 24px;
+    }
+
+    .icons span {
+        font-size: 24px;
+    }
+
+}
+
