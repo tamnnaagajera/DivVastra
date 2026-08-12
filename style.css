@@ -945,3 +945,391 @@ body {
     }
 
 }
+
+
+/* =========================
+   MOBILE PRODUCT PAGE
+========================= */
+
+@media (max-width: 600px) {
+
+    /* BACK BUTTON */
+
+    .back-link {
+        display: block;
+        padding: 15px;
+        font-size: 14px;
+    }
+
+
+    /* PRODUCT DETAILS */
+
+    .product-details {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 15px;
+        box-sizing: border-box;
+        gap: 25px;
+    }
+
+
+    /* PRODUCT IMAGE */
+
+    .product-images {
+        width: 100%;
+    }
+
+    .main-image {
+        width: 100%;
+        height: 380px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+
+    /* THUMBNAILS */
+
+    .thumbnail-images {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 8px;
+        margin-top: 10px;
+    }
+
+    .thumbnail-images div {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 11px;
+    }
+
+
+    /* PRODUCT INFORMATION */
+
+    .product-info {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .product-info h1 {
+        font-size: 26px;
+        margin-bottom: 10px;
+    }
+
+    .product-info h2 {
+        font-size: 22px;
+        margin-bottom: 15px;
+    }
+
+    .product-info p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+
+    /* SIZE */
+
+    .product-info h3 {
+        margin-top: 25px;
+        margin-bottom: 12px;
+    }
+
+    .sizes {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .sizes button {
+        width: 48px;
+        height: 48px;
+        background: white;
+        border: 1px solid #222;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .sizes button.selected {
+        background: #222;
+        color: white;
+    }
+
+
+    /* BUY BUTTON */
+
+    .buy-button {
+        width: 100%;
+        height: 50px;
+        margin-top: 25px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+
+    /* PRODUCT DESCRIPTION */
+
+    .product-description {
+        width: 100%;
+        padding: 30px 15px;
+        box-sizing: border-box;
+    }
+
+    .product-description h2 {
+        font-size: 22px;
+    }
+
+    .product-description h3 {
+        font-size: 16px;
+        margin-top: 25px;
+    }
+
+    .product-description p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+}
+
+/* =========================
+   MOBILE HEADER / NAVBAR
+========================= */
+
+@media (max-width: 600px) {
+
+    .top-nav {
+        font-size: 10px;
+        padding: 8px 10px;
+        text-align: center;
+    }
+
+    .header {
+        width: 100%;
+        height: 65px;
+        padding: 0 15px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        box-sizing: border-box;
+    }
+
+    .menu {
+        font-size: 24px;
+        cursor: pointer;
+        width: 35px;
+    }
+
+    .logo {
+        flex: 1;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 110px;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .icons {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 18px;
+        width: auto;
+    }
+
+    .icons span {
+        cursor: pointer;
+    }
+
+
+    /* SIDE MENU */
+
+    .side-menu {
+        width: 75%;
+        max-width: 300px;
+    }
+
+}
+
+
+
+
+
+/* =========================
+   HOME PAGE - MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    /* TOP BAR */
+
+    .top-nav {
+        height: auto;
+        min-height: 30px;
+        padding: 7px 10px;
+
+        font-size: 9px;
+        letter-spacing: 2px;
+
+        text-align: center;
+        line-height: 1.4;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        height: 65px;
+        padding: 0 15px;
+    }
+
+    .menu {
+        font-size: 25px;
+        width: 35px;
+    }
+
+    .logo {
+        flex: 1;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+
+    .icons {
+        gap: 8px;
+        font-size: 20px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        width: 100%;
+        height: 70vh;
+        min-height: 400px;
+        max-height: 600px;
+    }
+
+    .hero video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /* FEATURED COLLECTION */
+
+    .featured-section {
+        padding: 40px 0 50px;
+    }
+
+    .featured-section h2 {
+        font-size: 16px;
+        letter-spacing: 3px;
+        margin-bottom: 25px;
+    }
+
+
+    /* BUY + RENT */
+
+    .collection-grid {
+        width: 92%;
+        margin: 0 auto;
+
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .collection-card img {
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+    }
+
+    .collection-content {
+        padding: 18px 15px 22px;
+    }
+
+    .collection-content h3 {
+        font-size: 18px;
+        letter-spacing: 3px;
+    }
+
+    .collection-content button {
+        padding: 12px 22px;
+        font-size: 10px;
+    }
+
+
+    /* CUSTOMIZE CARD */
+
+    .customize-card {
+        width: 92%;
+        height: 280px;
+
+        margin: 35px auto 0;
+    }
+
+    .customize-overlay {
+        padding-left: 25px;
+        padding-right: 15px;
+    }
+
+    .customize-overlay h2 {
+        font-size: 23px;
+        letter-spacing: 3px;
+    }
+
+    .customize-overlay p {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+
+    .customize-overlay button {
+        padding: 11px 18px;
+        font-size: 10px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        grid-template-columns: 1fr 1fr;
+
+        padding: 40px 20px;
+
+        gap: 35px 20px;
+    }
+
+    .footer-section {
+        gap: 12px;
+    }
+
+    .footer-section h3 {
+        font-size: 13px;
+        letter-spacing: 2px;
+        margin-bottom: 10px;
+    }
+
+    .footer-section a {
+        font-size: 13px;
+    }
+
+
+    /* COPYRIGHT */
+
+    .copyright {
+        padding: 15px 10px;
+        font-size: 11px;
+    }
+
+}
+

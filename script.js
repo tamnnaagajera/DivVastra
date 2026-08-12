@@ -29,8 +29,6 @@ function selectBuySize(button) {
 
     selectedSize = button.innerText;
 }
-
-
 function buyOnWhatsApp() {
 
     if (selectedSize === "") {
@@ -38,11 +36,19 @@ function buyOnWhatsApp() {
         return;
     }
 
+    const productName =
+        document.getElementById("productName").innerText;
+
+    const productPrice =
+        document.getElementById("productPrice").innerText;
+
     const message =
         "Hello DIV VASTRA,%0A%0A" +
-        "I am interested in purchasing this Kurta.%0A" +
+        "I want to purchase this product.%0A%0A" +
+        "Product: " + productName + "%0A" +
+        "Price: " + productPrice + "%0A" +
         "Selected Size: " + selectedSize + "%0A%0A" +
-        "Please share the price, availability and other details.";
+        "Please confirm availability and purchase details.";
 
     window.open(
         "https://wa.me/919898605800?text=" + message,
@@ -68,7 +74,6 @@ function selectRentSize(button) {
     selectedRentSize = button.innerText;
 }
 
-
 function rentOnWhatsApp() {
 
     if (selectedRentSize === "") {
@@ -76,11 +81,19 @@ function rentOnWhatsApp() {
         return;
     }
 
+    const productName =
+        document.getElementById("rentProductName").innerText;
+
+    const productPrice =
+        document.getElementById("rentProductPrice").innerText;
+
     const message =
         "Hello DIV VASTRA,%0A%0A" +
-        "I am interested in renting this Kurta.%0A" +
+        "I want to rent this product.%0A%0A" +
+        "Product: " + productName + "%0A" +
+        "Rent Price: " + productPrice + "%0A" +
         "Selected Size: " + selectedRentSize + "%0A%0A" +
-        "Please share the rent price, availability and rental duration.";
+        "Please confirm availability and rental duration.";
 
     window.open(
         "https://wa.me/919898605800?text=" + message,
