@@ -1356,3 +1356,108 @@ body {
         width: 50px;
     }
 }
+
+@media (max-width: 600px) {
+
+    .icons span {
+        font-size: 28px;
+    }
+
+}
+
+/* =========================
+   HOME PAGE MOBILE FIX
+========================= */
+
+@media (max-width: 600px) {
+
+    /* HERO VIDEO - TALL / FULL SCREEN */
+
+    .hero {
+        width: 100%;
+        height: 90vh;
+        min-height: 550px;
+        max-height: none;
+        overflow: hidden;
+    }
+
+    .hero video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /* MAKE YOUR OWN DESIGN - RECTANGLE */
+
+    .customize-card {
+        width: 92%;
+        height: 220px;
+
+        margin: 35px auto 0;
+
+        border-radius: 0;
+        overflow: hidden;
+
+        position: relative;
+    }
+
+    .customize-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .customize-overlay {
+        width: 100%;
+        height: 100%;
+
+        padding: 20px 25px;
+
+        justify-content: center;
+    }
+
+    .customize-overlay h2 {
+        font-size: 21px;
+        letter-spacing: 2px;
+        margin-bottom: 8px;
+    }
+
+    .customize-overlay p {
+        font-size: 11px;
+        margin-bottom: 3px;
+    }
+
+    .customize-overlay button {
+        margin-top: 12px;
+        padding: 10px 16px;
+        font-size: 9px;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .customize-card {
+        width: 92%;
+        height: 220px;
+        margin: 35px auto 0;
+        border-radius: 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .customize-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .customize-overlay {
+        width: 100%;
+        height: 100%;
+        padding: 20px 25px;
+        justify-content: center;
+    }
+
+}
