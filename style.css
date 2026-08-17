@@ -1661,24 +1661,21 @@ body {
 
 
 /* =========================
-   DIV VASTRA EDITORIAL STORY
+   BRAND STORY
    ========================= */
 
 .brand-story {
-    width: 100%;
-    margin: 110px 0;
-    padding: 0 7%;
+    width: 92%;
+    margin: 100px auto;
     display: grid;
-    grid-template-columns: 48% 52%;
-    align-items: center;
-    gap: 8%;
-    box-sizing: border-box;
-    background: white;
+    grid-template-columns: 1.1fr 0.9fr;
+    min-height: 600px;
+    background: #f7f7f5;
 }
 
 .brand-story-image {
     width: 100%;
-    height: 620px;
+    height: 600px;
     overflow: hidden;
 }
 
@@ -1690,41 +1687,43 @@ body {
 }
 
 .brand-story-content {
-    padding: 40px 8% 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
 }
 
 .story-label {
     font-size: 11px;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     color: #777;
-    margin: 0 0 28px;
+    margin-bottom: 25px;
 }
 
 .brand-story-content h2 {
-    font-size: 42px;
-    line-height: 1.25;
+    font-size: 34px;
+    line-height: 1.35;
     letter-spacing: 3px;
     font-weight: 400;
-    margin: 0 0 30px;
+    margin-bottom: 25px;
 }
 
 .brand-story-content > p:not(.story-label) {
-    max-width: 390px;
+    max-width: 400px;
     color: #555;
     font-size: 15px;
-    line-height: 1.9;
-    margin: 0 0 35px;
+    line-height: 1.8;
+    margin-bottom: 30px;
 }
 
 .story-button {
-    display: inline-block;
-    padding: 14px 28px;
+    width: fit-content;
+    padding: 13px 25px;
     background: black;
     color: white;
     text-decoration: none;
     font-size: 11px;
     letter-spacing: 2px;
-    transition: 0.3s;
 }
 
 .story-button:hover {
@@ -1732,55 +1731,36 @@ body {
 }
 
 
-/* =========================
-   MOBILE
-   ========================= */
+/* MOBILE */
 
 @media (max-width: 768px) {
 
     .brand-story {
-        width: 100%;
-        margin: 70px 0;
-        padding: 0 20px;
-        display: flex;
-        flex-direction: column;
-        gap: 0;
+        width: 92%;
+        margin: 60px auto;
+        grid-template-columns: 1fr;
     }
 
     .brand-story-image {
-        width: 100%;
-        height: 430px;
+        height: 420px;
     }
 
     .brand-story-content {
-        padding: 45px 10px 10px;
+        padding: 45px 25px;
         text-align: center;
-    }
-
-    .story-label {
-        font-size: 10px;
-        letter-spacing: 4px;
-        margin-bottom: 20px;
+        align-items: center;
     }
 
     .brand-story-content h2 {
-        font-size: 27px;
-        line-height: 1.35;
+        font-size: 25px;
         letter-spacing: 2px;
-        margin-bottom: 22px;
     }
 
     .brand-story-content > p:not(.story-label) {
         font-size: 14px;
-        line-height: 1.8;
-        margin: 0 auto 28px;
     }
 
-    .story-button {
-        padding: 13px 24px;
-    }
 }
-
 
 /* =========================
    THE ART OF DRESSING
@@ -1788,7 +1768,7 @@ body {
 
 .art-section {
     width: 90%;
-    margin: 110px auto;
+    margin: 100px auto;
     padding: 90px 5%;
     text-align: center;
     border-top: 1px solid #ddd;
@@ -1813,7 +1793,6 @@ body {
 .art-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0;
     margin-bottom: 60px;
 }
 
@@ -1896,155 +1875,99 @@ body {
 }
 
 /* =========================
-   CUSTOMER REVIEWS
+   THE ART OF DRESSING
    ========================= */
 
-.reviews-section {
-    width: 90%;
+.art-section {
+    width: 92%;
     margin: 100px auto;
-    padding: 80px 0;
+    padding: 90px 40px;
     text-align: center;
-    border-top: 1px solid #ddd;
+    background: #f7f7f5;
 }
 
-.reviews-label {
-    font-size: 10px;
-    letter-spacing: 5px;
+.art-label {
+    margin: 0 0 18px;
+    font-size: 11px;
+    letter-spacing: 4px;
     color: #777;
-    margin-bottom: 18px;
 }
 
-.reviews-section > h2 {
-    font-size: 28px;
+.art-section > h2 {
+    margin: 0;
+    font-size: 34px;
     font-weight: 400;
     letter-spacing: 4px;
-    margin-bottom: 55px;
 }
 
-.reviews-grid {
+.art-intro {
+    max-width: 560px;
+    margin: 25px auto 65px;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.art-grid {
+    max-width: 1000px;
+    margin: 0 auto 55px;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
 }
 
-.review-card {
-    padding: 35px 30px;
-    border: 1px solid #ddd;
+.art-item {
+    padding: 10px 45px;
+    border-right: 1px solid #d5d5d5;
 }
 
-.review-stars {
-    font-size: 13px;
-    letter-spacing: 3px;
+.art-item:last-child {
+    border-right: none;
+}
+
+.art-item span {
+    display: block;
     margin-bottom: 25px;
-}
 
-.review-card p {
-    color: #555;
-    font-size: 14px;
-    line-height: 1.8;
-    max-width: 300px;
-    margin: 0 auto 25px;
-}
-
-.review-card h3 {
     font-size: 11px;
     letter-spacing: 3px;
-    font-weight: 500;
+    color: #888;
 }
 
-
-/* MOBILE */
-
-@media (max-width: 768px) {
-
-    .reviews-section {
-        width: 92%;
-        margin: 70px auto;
-        padding: 60px 0;
-    }
-
-    .reviews-section > h2 {
-        font-size: 23px;
-        letter-spacing: 3px;
-        margin-bottom: 40px;
-    }
-
-    .reviews-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .review-card {
-        padding: 30px 20px;
-    }
-
-}
-
-
-/* =========================
-   SOCIAL / INSTAGRAM
-   ========================= */
-
-.social-section {
-    width: 92%;
-    margin: 100px auto 80px;
-    text-align: center;
-}
-
-.social-label {
-    font-size: 10px;
-    letter-spacing: 5px;
-    color: #777;
-    margin-bottom: 15px;
-}
-
-.social-section h2 {
-    font-size: 28px;
-    font-weight: 400;
-    letter-spacing: 4px;
+.art-item h3 {
     margin: 0 0 15px;
+
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 3px;
 }
 
-.social-text {
+.art-item p {
+    margin: 0;
+
     color: #666;
     font-size: 14px;
     line-height: 1.7;
-    margin-bottom: 40px;
 }
 
-.social-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-}
-
-.social-image {
-    width: 100%;
-    height: 430px;
-    overflow: hidden;
-}
-
-.social-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.5s;
-}
-
-.social-image:hover img {
-    transform: scale(1.03);
-}
-
-.social-button {
+.art-link {
     display: inline-block;
-    margin-top: 35px;
+
     padding: 13px 25px;
+
     background: black;
     color: white;
+
     text-decoration: none;
+
     font-size: 11px;
     letter-spacing: 2px;
+
+    transition: 0.3s;
+}
+
+.art-link:hover {
+    background: #333;
 }
 
 
@@ -2052,26 +1975,35 @@ body {
 
 @media (max-width: 768px) {
 
-    .social-section {
+    .art-section {
         width: 92%;
-        margin: 70px auto 60px;
+        margin: 60px auto;
+        padding: 60px 20px;
     }
 
-    .social-section h2 {
-        font-size: 23px;
+    .art-section > h2 {
+        font-size: 25px;
+        letter-spacing: 3px;
     }
 
-    .social-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 8px;
+    .art-intro {
+        font-size: 14px;
+        margin-bottom: 45px;
     }
 
-    .social-image {
-        height: 250px;
+    .art-grid {
+        grid-template-columns: 1fr;
+        gap: 0;
     }
 
-    .social-image:last-child {
-        display: none;
+    .art-item {
+        padding: 30px 10px;
+        border-right: none;
+        border-bottom: 1px solid #d5d5d5;
+    }
+
+    .art-item:last-child {
+        border-bottom: none;
     }
 
 }
