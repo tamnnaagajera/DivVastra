@@ -25,58 +25,79 @@
         </p>
 
 
-        <form action="/signup" method="POST">
+        <form
+            class="account-form"
+            action="/signup"
+            method="POST"
+        >
 
-            <label>Full Name</label>
+            <label for="fullName">
+                Full Name
+            </label>
 
-<input
-    type="text"
-    name="fullName"
-    placeholder="Enter your name"
-    required
->
-
-
-<label>Email Address</label>
-
-<input
-    type="email"
-    name="email"
-    placeholder="Enter your email"
-    required
->
+            <input
+                type="text"
+                id="fullName"
+                name="fullName"
+                placeholder="Enter your name"
+                required
+            >
 
 
-<label>Phone Number</label>
+            <label for="email">
+                Email Address
+            </label>
 
-<input
-    type="tel"
-    name="phone"
-    placeholder="Enter your phone number"
-    required
->
-
-
-<label>Password</label>
-
-<input
-    type="password"
-    name="password"
-    placeholder="Create a password"
-    required
->
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
 
 
-<button type="submit">
-    CREATE ACCOUNT
-</button>
+            <label for="phone">
+                Phone Number
+            </label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter your phone number"
+                required
+            >
+
+
+            <label for="password">
+                Password
+            </label>
+
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Create a password"
+                required
+            >
+
+
+            <button type="submit">
+                CREATE ACCOUNT
+            </button>
 
         </form>
 
 
         <p class="account-switch">
+
             Already have an account?
-            <a href="login.html">LOGIN</a>
+
+            <a href="login.html">
+                LOGIN
+            </a>
+
         </p>
 
 

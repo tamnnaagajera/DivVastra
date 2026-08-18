@@ -40,6 +40,8 @@ const dbConfig = {
 
 app.post("/signup", async (req, res) => {
 
+    
+
     try {
 
         const { fullName, email, phone, password } = req.body;
@@ -83,6 +85,113 @@ app.post("/signup", async (req, res) => {
 
 });
 
+// =========================
+// LOGIN
+// =========================
+
+app.post("/login", async (req, res) => {
+
+    try {
+
+        const { email, password } = req.body;
+
+        if (!email || !password) {
+            return res.status(400).send("Please enter email and password.");
+        }
+
+        // Find user by email
+        const result = await sql.query`
+            SELECT UserID, FullName, Email, Phone, PasswordHash
+            FROM Users
+            WHERE Email = ${email}
+        `;
+
+        if (result.recordset.length === 0) {
+            return res.status(401).send("Invalid email or password.");
+        }
+
+        const user = result.recordset[0];
+
+        // Compare password
+        const passwordMatch = await bcrypt.compare(
+            password,
+            user.PasswordHash
+        );
+
+        if (!passwordMatch) {
+            return res.status(401).send("Invalid email or password.");
+        }
+
+        // Create session
+        req.session.user = {
+            userId: user.UserID,
+            fullName: user.FullName,
+            email: user.Email,
+            phone: user.Phone
+        };
+
+        console.log("User logged in:", user.Email);
+
+       res.redirect("/index.html");
+
+    } catch (error) {
+
+        console.error("Login error:");
+        console.error(error);
+
+        res.status(500).send("Something went wrong.");
+
+    }
+
+});
+
+
+/// =========================
+// CHECK LOGIN STATUS
+// =========================
+
+app.get("/api/me", (req, res) => {
+
+    if (req.session && req.session.user) {
+
+        return res.json({
+            loggedIn: true,
+            user: req.session.user
+        });
+
+    }
+
+    res.json({
+        loggedIn: false
+    });
+
+});
+
+
+// =========================
+// LOGOUT
+// =========================
+
+app.get("/logout", (req, res) => {
+
+    req.session.destroy((err) => {
+
+        if (err) {
+            console.error("Logout error:", err);
+            return res.status(500).json({
+                success: false
+            });
+        }
+
+        res.clearCookie("connect.sid");
+
+        res.json({
+            success: true
+        });
+
+    });
+
+});
 // =========================
 // TEST DATABASE CONNECTION
 // =========================

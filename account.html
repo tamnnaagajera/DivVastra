@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Account | DIV VASTRA</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <section class="account-page">
+
+        <p class="simple-label">DIV VASTRA</p>
+
+        <h1>MY ACCOUNT</h1>
+
+<div class="account-details">
+
+    <p>
+        <strong>Full Name</strong>
+        <span id="userName">Loading...</span>
+    </p>
+
+    <p>
+        <strong>Email</strong>
+        <span id="userEmail">Loading...</span>
+    </p>
+
+    <p>
+        <strong>Phone</strong>
+        <span id="userPhone">Loading...</span>
+    </p>
+
+</div>
+
+<button type="button" onclick="logout()">
+    LOGOUT
+</button>
+
+        <br><br>
+
+        <a href="index.html" class="back-home">
+            ← BACK TO HOME
+        </a>
+
+    </section>
+
+
+  
+
+        <script>
+
+fetch("/api/me")
+    .then(response => response.json())
+    .then(data => {
+
+        if (!data.loggedIn) {
+            window.location.href = "/login.html";
+            return;
+        }
+
+        document.getElementById("userName").textContent =
+            data.user.fullName;
+
+        document.getElementById("userEmail").textContent =
+            data.user.email;
+
+        document.getElementById("userPhone").textContent =
+            data.user.phone;
+
+    })
+    .catch(error => {
+        console.error("Account error:", error);
+    });
+
+
+function logout() {
+
+    fetch("/logout")
+        .then(response => response.json())
+        .then(data => {
+
+            if (data.success) {
+                window.location.href = "/login.html";
+            }
+
+        })
+        .catch(error => {
+            console.error("Logout error:", error);
+        });
+
+}
+
+</script>
+</body>
+
+</html>

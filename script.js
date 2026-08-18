@@ -455,3 +455,26 @@ window.addEventListener("load", function () {
     }
 
 });
+
+function openAccount() {
+
+    fetch("/api/me")
+        .then(response => response.json())
+        .then(data => {
+
+            if (data.loggedIn) {
+                window.location.href = "account.html";
+            } else {
+                window.location.href = "login.html";
+            }
+
+        })
+        .catch(error => {
+
+            console.error("Account check failed:", error);
+
+            window.location.href = "login.html";
+
+        });
+
+}
