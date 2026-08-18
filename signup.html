@@ -24,12 +24,7 @@
             Create your DIV VASTRA account.
         </p>
 
-
-        <form
-            class="account-form"
-            action="/signup"
-            method="POST"
-        >
+<form class="account-form" id="signupForm">
 
             <label for="fullName">
                 Full Name
@@ -106,6 +101,47 @@
         </a>
 
     </section>
+
+    <script>
+document.getElementById("signupForm").addEventListener("submit", async function (event) {
+
+    event.preventDefault();
+
+    const form = event.target;
+
+    const data = {
+        fullName: form.fullName.value,
+        email: form.email.value,
+        phone: form.phone.value,
+        password: form.password.value
+    };
+
+    try {
+
+        const response = await fetch("/.netlify/functions/signup", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        });
+
+        const message = await response.text();
+
+        if (response.ok) {
+            alert(message);
+            window.location.href = "/login.html";
+        } else {
+            alert(message);
+        }
+
+    } catch (error) {
+        console.error(error);
+        alert("Something went wrong.");
+    }
+
+});
+</script>
 
 </body>
 
