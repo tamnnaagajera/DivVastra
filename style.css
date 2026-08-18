@@ -2328,3 +2328,106 @@ body {
     }
 
 }
+
+/* =========================
+   ACCOUNT PAGES
+   ========================= */
+
+.account-page {
+    width: 90%;
+    max-width: 520px;
+    margin: 100px auto;
+    text-align: center;
+}
+
+.account-page h1 {
+    font-size: 38px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin: 20px 0;
+}
+
+.account-intro {
+    color: #666;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 45px;
+}
+
+.account-form {
+    text-align: left;
+}
+
+.account-form label {
+    display: block;
+    margin-bottom: 9px;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.account-form input {
+    width: 100%;
+    box-sizing: border-box;
+
+    padding: 15px 12px;
+    margin-bottom: 25px;
+
+    border: none;
+    border-bottom: 1px solid #aaa;
+
+    outline: none;
+
+    font-size: 14px;
+    background: transparent;
+}
+
+.account-form input:focus {
+    border-bottom-color: #000;
+}
+
+.account-form button {
+    width: 100%;
+
+    padding: 16px;
+
+    border: none;
+    background: #000;
+    color: #fff;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    margin-top: 10px;
+}
+
+.account-form button:hover {
+    background: #333;
+}
+
+.account-switch {
+    margin-top: 30px;
+
+    font-size: 13px;
+    color: #666;
+}
+
+.account-switch a {
+    color: #000;
+    margin-left: 5px;
+
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+.account-switch a:hover {
+    text-decoration: underline;
+}
+
+.account-page .back-home {
+    margin-top: 35px;
+}
