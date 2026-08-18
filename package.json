@@ -1,0 +1,28 @@
+{
+  "name": "divvastra",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tamnnaagajera/DivVastra.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tamnnaagajera/DivVastra/issues"
+  },
+  "homepage": "https://github.com/tamnnaagajera/DivVastra#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "express": "^5.2.1",
+    "express-session": "^1.19.0",
+    "msnodesqlv8": "^5.2.3",
+    "mssql": "^12.7.0"
+  }
+}

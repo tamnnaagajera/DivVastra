@@ -25,47 +25,51 @@
         </p>
 
 
-        <form class="account-form">
+        <form action="/signup" method="POST">
 
             <label>Full Name</label>
 
-            <input
-                type="text"
-                placeholder="Enter your name"
-                required
-            >
+<input
+    type="text"
+    name="fullName"
+    placeholder="Enter your name"
+    required
+>
 
 
-            <label>Email Address</label>
+<label>Email Address</label>
 
-            <input
-                type="email"
-                placeholder="Enter your email"
-                required
-            >
-
-
-            <label>Phone Number</label>
-
-            <input
-                type="tel"
-                placeholder="Enter your phone number"
-                required
-            >
+<input
+    type="email"
+    name="email"
+    placeholder="Enter your email"
+    required
+>
 
 
-            <label>Password</label>
+<label>Phone Number</label>
 
-            <input
-                type="password"
-                placeholder="Create a password"
-                required
-            >
+<input
+    type="tel"
+    name="phone"
+    placeholder="Enter your phone number"
+    required
+>
 
 
-            <button type="submit">
-                CREATE ACCOUNT
-            </button>
+<label>Password</label>
+
+<input
+    type="password"
+    name="password"
+    placeholder="Create a password"
+    required
+>
+
+
+<button type="submit">
+    CREATE ACCOUNT
+</button>
 
         </form>
 
